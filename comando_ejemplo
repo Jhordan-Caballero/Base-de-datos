@@ -1,0 +1,8 @@
+USE [prueba de laboratio];
+
+CREATE TABLE Ejemplo (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50)
+);
+
+INSERT INTO Ejemplo (id, nombre) VALUES (1, 'Juan');
