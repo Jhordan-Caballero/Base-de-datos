@@ -1,0 +1,9 @@
+create table Proyecto1(
+vuelos varchar (10),
+pasajeros varchar (20),
+reservas varchar (5),
+aerolíneas varchar (5),
+pagos decimal (13,3),
+asientos numeric (10),
+documentos varchar (15),
+)
