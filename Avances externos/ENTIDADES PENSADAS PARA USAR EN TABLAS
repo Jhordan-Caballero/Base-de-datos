@@ -1,0 +1,31 @@
+ENTIDADES PENSADAS PARA DESARROLLAR CON SUS ATRIBUTOS:
+*vuelos
+ -id del vuelo
+ -origen del vuelo
+ -destino del vuelo
+ -fecha de salida
+ -fecha de entrega
+ -precio
+ -aerolínea
+*pasajeros
+ -id del pasajero
+ -nombre y apellido
+ -pasaporte (DNI)
+ -nacionalidad
+ -teléfono
+*reservas
+ -id de la reserva
+ -id del vuelo
+ -id del pasajero
+ -asiento
+ -fecha de reserva
+*pagos
+ -fecha de pago
+ -método de pago
+ -monto
+ -validación de pago
+*asientos 
+ -id del vuelo
+ -numero de asiento
+ -clase de asiento(ejemplo:turista)
+ -disponibilidad
