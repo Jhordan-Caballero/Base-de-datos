@@ -1,0 +1,25 @@
+create table aerolínea(
+nombre varchar(20) primary key,
+asiento varchar(20) not null
+);
+create table pasajeros(
+id_pasajero int primary key,
+nombre varchar(20) not null
+);
+create table vuelos(
+fecha_salida date primary key,
+nombre varchar(20),
+id_pasajero int,
+fecha_llegada date,
+foreign key (nombre) references aerolínea(nombre),
+foreign key (id_pasajero) references pasajeros(id_pasajero),
+);
+
+insert into aerolínea values ( 'Latam','A203')
+insert into aerolínea values ( 'Sky','A204')
+
+insert into pasajeros values ( '001','Pedro')
+insert into pasajeros values ( '002','Juanito')
+
+insert into vuelos values ( '2025/05/14','Pedro')
+insert into vuelos values ( '2025/06/11','Juanito')
