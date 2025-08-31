@@ -10,7 +10,6 @@ origen varchar(25),
 destino varchar(25),
 fecha_salida date,
 fecha_llegada date,
-precio decimal(10,2),
 aerolinea varchar(25)
 );
 create table pasajeros(
@@ -49,13 +48,33 @@ disponibilidad varchar(20),
 foreign key (id_vuelo) references vuelos(id_vuelo)
 );
 
-insert into vuelos(origen, destino, fecha_salida, fecha_llegada, precio, aerolinea) 
+insert into vuelos(origen, destino, fecha_salida, fecha_llegada, aerolinea) 
 values
-('Madrid', 'París', '2024-03-20', '2024-03-20', 250.00, 'Iberia'),
-('Barcelona', 'Roma', '2024-03-22', '2024-03-22', 300.00, 'Vueling'),
-('París', 'Nueva York', '2024-03-25', '2024-03-25', 650.00, 'Air France'),
-('Lima', 'Colombia', '2024-03-21', '2024-03-21', 100.00, 'Vueling'),
-('Argentina', 'Perú', '2024-03-25', '2024-03-25', 120.00, 'Air France');
+('Madrid', 'París', '2025-09-20', '2025-09-20', 'Iberia'),
+('Barcelona', 'Roma', '2025-08-21', '2025-08-22', 'Emirates'),
+('París', 'Nueva York', '2025-09-26', '2025-09-25','Air France'),
+('Lima', 'Colombia', '2025-07-21', '2025-07-21','American Airlines'),
+('París', 'Nueva York', '2025-08-10', '2025-08-10', 'KLM'),
+('Lima', 'Bogotá', '2025-09-22', '2025-09-22', 'LATAM'),
+('Madrid', 'Miami', '2025-07-20', '2025-07-20', 'Iberia'),
+('Roma', 'Berlín', '2025-10-15', '2025-10-15', 'Ryanair'),
+('Dubái', 'Sídney', '2025-11-05', '2025-11-06', 'Qatar Airways'),
+('Tokio', 'Los Ángeles', '2025-08-29', '2025-08-29', 'ANA'),
+('Ámsterdam', 'Toronto', '2025-09-30', '2025-09-30', 'Air Canada'),
+('Barcelona', 'Lisboa', '2025-10-08', '2025-10-08', 'TAP'),
+('Londres', 'Budapest', '2025-11-20', '2025-11-20', 'Wizz'),
+('Fráncfort', 'Ciudad de México', '2025-07-25', '2025-07-25', 'Lufthansa'),
+('Singapur', 'Atenas', '2025-08-15', '2025-08-15', 'Scoot'),
+('Nueva York', 'Orlando', '2025-09-05', '2025-09-05', 'JetBlue'),
+('Milán', 'Barcelona', '2025-10-28', '2025-10-28', 'Ryanair'),
+('Doha', 'Bangkok', '2025-11-12', '2025-11-12', 'Qatar Airways'),
+('Boston', 'Las Vegas', '2025-07-30', '2025-07-30', 'Frontier'),
+('Berlín', 'Viena', '2025-08-18', '2025-08-18', 'EasyJet'),
+('Osaka', 'Shanghái', '2025-10-01', '2025-10-01', 'ANA'),
+('São Paulo', 'Santiago', '2025-11-25', '2025-11-25', 'LATAM'),
+('Manchester', 'Varsovia', '2025-09-10', '2025-09-10', 'Ryanair'),
+('Lisboa', 'Buenos Aires', '2025-07-16', '2025-07-17', 'TAP'),
+('Argentina', 'Perú', '2025-11-25', '2025-11-25','Air France');
 
 insert into pasajeros(nombre_apellido, pasaporte, nacionalidad, telefono)
 values
@@ -194,4 +213,3 @@ values
 ('08C', 2, 'Turista', 'Disponible'),
 ('02B', 3, 'Business', 'Ocupado');
 
-select * from pasajeros;
